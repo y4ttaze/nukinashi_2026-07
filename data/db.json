@@ -141,12 +141,12 @@
     "yt": "https://www.youtube.com/@kirejimajiitai"
   },
   {
-    "id": "04_雨花_雨の降る街で。",
+    "id": "04_ame_flower",
     "artist": "雨花",
     "title": "雨の降る街で。",
-    "jacket": "data/04_雨花_雨の降る街で。/jacket.webp",
-    "artist_img": "data/04_雨花_雨の降る街で。/artist_雨花.webp",
-    "teaser": "data/04_雨花_雨の降る街で。/Teaser.mp4",
+    "jacket": "data/04_ame_flower/jacket.webp",
+    "artist_img": "data/04_ame_flower/artist_雨花.webp",
+    "teaser": "data/04_ame_flower/Teaser.mp4",
     "tracks": [
       {
         "title": "残映"
