@@ -1,0 +1,170 @@
+[
+  {
+    "id": "01_y4ttaze_DaysBeforeVillain",
+    "artist": "y4ttaze",
+    "title": "DaysBeforeVillain",
+    "jacket": "data/01_y4ttaze_DaysBeforeVillain/jacket.webp",
+    "artist_img": "data/01_y4ttaze_DaysBeforeVillain/artist_y4ttaze.webp",
+    "teaser": "data/01_y4ttaze_DaysBeforeVillain/teaser.mp4",
+    "tracks": [
+      {
+        "title": "あおいくん"
+      },
+      {
+        "title": "ゆうえんち"
+      },
+      {
+        "title": "17ice(142cm) feat. 夜行梅"
+      },
+      {
+        "title": "ショートフィルム!"
+      },
+      {
+        "title": "スペースシャトル"
+      },
+      {
+        "title": "神椿"
+      },
+      {
+        "title": "(radio)"
+      }
+    ],
+    "price": "¥1,000",
+    "tracks_count": 7,
+    "description": "最新作！「あおいくん」など、きもい曲も収録！当日はこれらに加えてアクキーもあるぞ！",
+    "x": "https://x.com/y4ttaze",
+    "yt": "https://www.youtube.com/@y4ttaze"
+  },
+  {
+    "id": "02_y4ttaze_sexT4pe",
+    "artist": "y4ttaze",
+    "title": "sexT4pe",
+    "jacket": "data/02_y4ttaze_sexT4pe/jacket.webp",
+    "artist_img": "data/02_y4ttaze_sexT4pe/artist_y4ttaze.webp",
+    "teaser": "data/02_y4ttaze_sexT4pe/teaser.mp4",
+    "tracks": [
+      {
+        "title": "サハラ(pixel Sahara)"
+      },
+      {
+        "title": "Interlude(1)"
+      },
+      {
+        "title": "BitchBoi"
+      },
+      {
+        "title": "Interlude(2)"
+      },
+      {
+        "title": "クリムト"
+      },
+      {
+        "title": "セックステープ"
+      },
+      {
+        "title": "シロップ"
+      },
+      {
+        "title": "BoisLuv"
+      },
+      {
+        "title": "クリムト(Remix)"
+      },
+      {
+        "title": "LuvPotion"
+      },
+      {
+        "title": "BitchBoi(ft. flower)"
+      },
+      {
+        "title": "(radio)"
+      }
+    ],
+    "price": "¥1,500?",
+    "tracks_count": 12,
+    "description": "以前配信したEPの物理版。全編再mixに加え非公開曲が2曲!",
+    "x": "https://x.com/y4ttaze",
+    "yt": "https://www.youtube.com/@y4ttaze"
+  },
+  {
+    "id": "03_カミナシ_孤独なテラリウム",
+    "artist": "カミナシ",
+    "title": "孤独なテラリウム",
+    "jacket": "data/03_カミナシ_孤独なテラリウム/jacket.jpg",
+    "artist_img": "data/03_カミナシ_孤独なテラリウム/artist_カミナシ.webp",
+    "teaser": "data/03_カミナシ_孤独なテラリウム/XFD.mp4",
+    "tracks": [
+      {
+        "title": "夏の背 feat. 鏡音リン&鏡音レン"
+      },
+      {
+        "title": "最後に聞いた音 feat. 鏡音レン"
+      },
+      {
+        "title": "迷っちゃった feat. 重音テト"
+      },
+      {
+        "title": "あなたが忘れても feat. 鏡音リン & 鏡音レン"
+      },
+      {
+        "title": "ずるやすみ feat. 宮舞モカ"
+      },
+      {
+        "title": "嘘と毒 feat. 初音ミク"
+      },
+      {
+        "title": "シーサイドガール feat. 鏡音リン"
+      },
+      {
+        "title": "海の月 feat. 宮舞モカ"
+      },
+      {
+        "title": "二錠 feat. 鏡音リン&鏡音レン"
+      },
+      {
+        "title": "渡り鳥は三度鳴く feat. 可不&裏命"
+      },
+      {
+        "title": "覆水 feat. 宮舞モカ"
+      },
+      {
+        "title": "サツキヤマイ feat. 宮舞モカ"
+      },
+      {
+        "title": "記憶の傍に feat. 宮舞モカ"
+      }
+    ],
+    "price": "¥2,000",
+    "tracks_count": 13,
+    "description": "最新作！",
+    "x": "https://x.com/kirejimajiitai",
+    "yt": "https://www.youtube.com/@kirejimajiitai"
+  },
+  {
+    "id": "04_雨花_雨の降る街で。",
+    "artist": "雨花",
+    "title": "雨の降る街で。",
+    "jacket": "data/04_雨花_雨の降る街で。/jacket.webp",
+    "artist_img": "data/04_雨花_雨の降る街で。/artist_雨花.webp",
+    "teaser": "data/04_雨花_雨の降る街で。/Teaser.mp4",
+    "tracks": [
+      {
+        "title": "残映"
+      },
+      {
+        "title": "青枯れ"
+      },
+      {
+        "title": "ヒトリノ"
+      },
+      {
+        "title": "落日"
+      }
+    ],
+    "price": "¥1,000",
+    "tracks_count": 4,
+    "description": "最新作！",
+    "x": "https://x.com/ame_flower0401",
+    "yt": "https://www.youtube.com/@%E9%9B%A8%E8%8A%B1-t8w"
+  }
+]
