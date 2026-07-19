@@ -848,9 +848,11 @@ body, html {
         flex: none;
         padding-bottom: 180px;
         margin-top: 15px;
+        align-items: center; /* Center images */
     }
     .catalog-track-item {
         font-size: 1.2rem;
+        width: 100%;
     }
 
     /* Mini Player */
@@ -885,9 +887,9 @@ body, html {
 
 /* Image Modal (Lightbox) */
 .image-modal {
-    display: none;
+    display: flex;
     position: fixed;
-    z-index: 2000;
+    z-index: -1;
     left: 0;
     top: 0;
     width: 100%;
@@ -895,12 +897,15 @@ body, html {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    pointer-events: none;
+    transition: opacity 0.3s ease, z-index 0s linear 0.3s;
 }
 
 .image-modal.active {
-    display: flex;
+    z-index: 2000;
     opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease, z-index 0s;
 }
 
 .image-modal-bg {
