@@ -462,6 +462,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                     imgEl.style.borderRadius = "12px";
                     imgEl.style.marginBottom = "15px";
                     imgEl.style.boxShadow = "0 10px 20px rgba(0,0,0,0.5)";
+                    imgEl.style.cursor = "pointer";
+                    imgEl.addEventListener("click", () => {
+                        const modal = document.getElementById("image-modal");
+                        const modalImg = document.getElementById("modal-img");
+                        if (modal && modalImg) {
+                            modalImg.src = imgSrc;
+                            modal.classList.add("active");
+                            startInactivityTimeout();
+                        }
+                    });
                     tracklistContainer.appendChild(imgEl);
                 });
             }
@@ -487,6 +497,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.addEventListener("mousemove", () => {
         if (!signageMode.classList.contains("active")) startInactivityTimeout();
     });
+
+    // Image Modal Logic
+    const imageModal = document.getElementById("image-modal");
+    if (imageModal) {
+        imageModal.addEventListener("click", () => {
+            imageModal.classList.remove("active");
+            startInactivityTimeout();
+        });
+    }
 
     // Volume Control Logic
     const volIconMute = document.getElementById("vol-icon-mute");
