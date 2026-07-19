@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let previousTeaserSrc = null;
 
     db.forEach(ep => {
+        if (ep.id && ep.id.startsWith("comp_")) return; // Exclude compilations from filters
         if (!artistsInfo.find(a => a.name === ep.artist)) {
             artistsInfo.push({ name: ep.artist, img: ep.artist_img || '' });
         }
@@ -179,10 +180,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function updateEPCarousel() {
         let displayCount = 0;
-        epDOMNodes.forEach((node) => {
+        epDOMNodes.forEach((node, index) => {
+            const ep = db[index];
             if (currentArtistFilterIndex !== -1) {
                 const selectedArtist = artistsInfo[currentArtistFilterIndex].name;
-                if (node.artist === selectedArtist) {
+                
+                let isMatch = node.artist === selectedArtist;
+                if (!isMatch && ep.id && ep.id.startsWith("comp_")) {
+                    if (ep.description && ep.description.includes(selectedArtist)) {
+                        isMatch = true;
+                    }
+                }
+
+                if (isMatch) {
                     node.card.style.display = "block";
                     node.card.style.animation = 'none';
                     void node.card.offsetWidth; // Force reflow
