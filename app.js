@@ -279,10 +279,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             activeNodes = activeNodes.filter(n => epDOMNodes.indexOf(n) !== currentTeaserIndex);
         }
 
-        const randomNode = activeNodes[Math.floor(Math.random() * activeNodes.length)];
+        // Only pick nodes that have a teaser
+        const validNodes = activeNodes.filter(n => db[epDOMNodes.indexOf(n)].teaser);
+        if (validNodes.length === 0) return;
+
+        const randomNode = validNodes[Math.floor(Math.random() * validNodes.length)];
         currentTeaserIndex = epDOMNodes.indexOf(randomNode);
         const ep = db[currentTeaserIndex];
-        changeTeaserVideo(ep.teaser);
+        if (ep && ep.teaser) {
+            changeTeaserVideo(ep.teaser);
+        }
     }
 
     if (teaserVideo) {
@@ -430,7 +436,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (currentEP.nico) { linkNico.href = currentEP.nico; linkNico.style.display = "inline-flex"; } else { linkNico.style.display = "none"; }
         
         catalogPrice.innerText = currentEP.price || "¥1,000";
-        catalogTracks.innerText = currentEP.tracks_count ? `${currentEP.tracks_count}曲入り` : "収録数未定";
+        if (currentEP.type === "merch") {
+            catalogTracks.innerText = "グッズ";
+        } else {
+            catalogTracks.innerText = currentEP.tracks_count ? `${currentEP.tracks_count}曲入り` : "収録数未定";
+        }
         catalogDesc.innerText = currentEP.description || "最新作！";
 
         const tracklistContainer = document.getElementById("catalog-tracklist");
@@ -442,6 +452,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                     el.className = "catalog-track-item";
                     el.innerText = `${i+1}. ${track.title}`;
                     tracklistContainer.appendChild(el);
+                });
+            } else if (currentEP.images && currentEP.images.length > 0) {
+                currentEP.images.forEach((imgSrc) => {
+                    const imgEl = document.createElement("img");
+                    imgEl.src = imgSrc;
+                    imgEl.className = "catalog-image-item";
+                    imgEl.style.width = "100%";
+                    imgEl.style.borderRadius = "12px";
+                    imgEl.style.marginBottom = "15px";
+                    imgEl.style.boxShadow = "0 10px 20px rgba(0,0,0,0.5)";
+                    tracklistContainer.appendChild(imgEl);
                 });
             }
         }

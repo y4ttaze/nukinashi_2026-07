@@ -770,9 +770,9 @@ body, html {
         margin-bottom: 10px;
     }
     .ep-list {
-        padding: 10px;
+        padding: 10px 10px 120px 10px;
         gap: 15px;
-        max-height: calc(100vh - 200px); /* Adjust for mobile */
+        max-height: calc(100vh - 180px); /* Adjust for mobile */
     }
     .ep-card {
         width: 140px;
