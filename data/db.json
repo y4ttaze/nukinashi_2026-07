@@ -3,8 +3,8 @@
     "id": "01_y4ttaze_DaysBeforeVillain",
     "artist": "y4ttaze",
     "title": "DaysBeforeVillain",
-    "jacket": "data/01_y4ttaze_DaysBeforeVillain/jacket.webp",
-    "artist_img": "data/01_y4ttaze_DaysBeforeVillain/artist_y4ttaze.webp",
+    "jacket": "data/01_y4ttaze_DaysBeforeVillain/jacket.jpg",
+    "artist_img": "data/01_y4ttaze_DaysBeforeVillain/artist_y4ttaze.jpg",
     "teaser": "data/01_y4ttaze_DaysBeforeVillain/teaser.mp4",
     "tracks": [
       {
@@ -39,8 +39,8 @@
     "id": "02_y4ttaze_sexT4pe",
     "artist": "y4ttaze",
     "title": "sexT4pe",
-    "jacket": "data/02_y4ttaze_sexT4pe/jacket.webp",
-    "artist_img": "data/02_y4ttaze_sexT4pe/artist_y4ttaze.webp",
+    "jacket": "data/02_y4ttaze_sexT4pe/jacket.jpg",
+    "artist_img": "data/02_y4ttaze_sexT4pe/artist_y4ttaze.jpg",
     "teaser": "data/02_y4ttaze_sexT4pe/teaser.mp4",
     "tracks": [
       {
@@ -91,7 +91,7 @@
     "artist": "カミナシ",
     "title": "孤独なテラリウム",
     "jacket": "data/03_カミナシ_孤独なテラリウム/jacket.jpg",
-    "artist_img": "data/03_カミナシ_孤独なテラリウム/artist_カミナシ.webp",
+    "artist_img": "data/03_カミナシ_孤独なテラリウム/artist_カミナシ.jpg",
     "teaser": "data/03_カミナシ_孤独なテラリウム/XFD.mp4",
     "tracks": [
       {
@@ -144,8 +144,8 @@
     "id": "04_ame_flower",
     "artist": "雨花",
     "title": "雨の降る街で。",
-    "jacket": "data/04_ame_flower/jacket.webp",
-    "artist_img": "data/04_ame_flower/artist_雨花.webp",
+    "jacket": "data/04_ame_flower/jacket.jpg",
+    "artist_img": "data/04_ame_flower/artist_雨花.jpg",
     "teaser": "data/04_ame_flower/Teaser.mp4",
     "teasers": [
       {
@@ -235,14 +235,14 @@
     "id": "05_y4ttaze_keychain",
     "artist": "y4ttaze",
     "title": "アクキー",
-    "jacket": "data/03_y4ttaze_アクキー/00.サムネ.png",
-    "artist_img": "data/01_y4ttaze_DaysBeforeVillain/artist_y4ttaze.webp",
+    "jacket": "data/03_y4ttaze_アクキー/00.サムネ.jpg",
+    "artist_img": "data/01_y4ttaze_DaysBeforeVillain/artist_y4ttaze.jpg",
     "teaser": "",
     "type": "merch",
     "images": [
       "data/03_y4ttaze_アクキー/01.Remix表面.jpg",
       "data/03_y4ttaze_アクキー/02.Remix裏面.jpg",
-      "data/03_y4ttaze_アクキー/03.アクキー6種.webp"
+      "data/03_y4ttaze_アクキー/03.アクキー6種.jpg"
     ],
     "price": "各¥1,000",
     "tracks_count": 0,
