@@ -147,6 +147,16 @@
     "jacket": "data/04_ame_flower/jacket.webp",
     "artist_img": "data/04_ame_flower/artist_雨花.webp",
     "teaser": "data/04_ame_flower/Teaser.mp4",
+    "teasers": [
+      {
+        "src": "data/04_ame_flower/Teaser.mp4",
+        "weight": 6
+      },
+      {
+        "src": "data/04_ame_flower/Aogare_MV.mp4",
+        "weight": 4
+      }
+    ],
     "tracks": [
       {
         "title": "残映"
@@ -166,6 +176,60 @@
     "description": "【配置: B13,14】雨花の1stEP！初音ミクを歌姫にフィーチャーした4曲！バンド「ミカヅキ」活動中！",
     "x": "https://x.com/ame_flower0401",
     "yt": "https://www.youtube.com/@%E9%9B%A8%E8%8A%B1-t8w"
+  },
+  {
+    "id": "05_ミカヅキ_海月のわるつ",
+    "artist": "ミカヅキ",
+    "title": "海月のわるつ",
+    "jacket": "data/05_ミカヅキ_海月のわるつ/jacket.jpg",
+    "artist_img": "data/05_ミカヅキ_海月のわるつ/artist_ミカヅキ.jpg",
+    "teaser": null,
+    "tracks": [
+      {
+        "title": "海月のわるつ"
+      }
+    ],
+    "price": "¥800",
+    "tracks_count": 1,
+    "description": "【配置: B13,14】バンド「ミカヅキ」の1stシングル！",
+    "x": "https://x.com/mkzk_official",
+    "yt": "https://www.youtube.com/@mikazuki_official"
+  },
+  {
+    "id": "06_ミカヅキ_月の梯子",
+    "artist": "ミカヅキ",
+    "title": "月の梯子",
+    "jacket": "data/06_ミカヅキ_月の梯子/jacket_unreleased.svg",
+    "artist_img": "data/05_ミカヅキ_海月のわるつ/artist_ミカヅキ.jpg",
+    "teaser": null,
+    "tracks": [
+      {
+        "title": "月の梯子"
+      }
+    ],
+    "price": "¥800",
+    "tracks_count": 1,
+    "description": "【配置: B13,14】バンド「ミカヅキ」のNEWシングル！※ジャケットは即売会会場にて初公開！",
+    "x": "https://x.com/mkzk_official",
+    "yt": "https://www.youtube.com/@mikazuki_official"
+  },
+  {
+    "id": "07_ミカヅキ_夜空言",
+    "artist": "ミカヅキ",
+    "title": "夜空言",
+    "jacket": "data/07_ミカヅキ_夜空言/jacket_unreleased.svg",
+    "artist_img": "data/05_ミカヅキ_海月のわるつ/artist_ミカヅキ.jpg",
+    "teaser": null,
+    "tracks": [
+      {
+        "title": "夜空言"
+      }
+    ],
+    "price": "¥800",
+    "tracks_count": 1,
+    "description": "【配置: B13,14】バンド「ミカヅキ」のNEWシングル！※ジャケットは即売会会場にて初公開！",
+    "x": "https://x.com/mkzk_official",
+    "yt": "https://www.youtube.com/@mikazuki_official"
   },
   {
     "id": "05_y4ttaze_keychain",

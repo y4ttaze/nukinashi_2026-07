@@ -87,10 +87,28 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (epTitleDisplay) marqueeObserver.observe(epTitleDisplay);
 
+    function getEPTeaser(ep) {
+        if (!ep) return null;
+        if (ep.teasers && ep.teasers.length > 0) {
+            const totalWeight = ep.teasers.reduce((sum, t) => sum + (t.weight || 1), 0);
+            let rand = Math.random() * totalWeight;
+            for (const t of ep.teasers) {
+                if (rand < (t.weight || 1)) return t.src;
+                rand -= (t.weight || 1);
+            }
+            return ep.teasers[0].src;
+        }
+        return ep.teaser || null;
+    }
+
     // Populate EP Selection Carousel and Teaser List
     let teaserList = [];
     db.forEach((ep) => {
-        if (ep.teaser && !teaserList.includes(ep.teaser)) {
+        if (ep.teasers && ep.teasers.length > 0) {
+            ep.teasers.forEach(t => {
+                if (t.src && !teaserList.includes(t.src)) teaserList.push(t.src);
+            });
+        } else if (ep.teaser && !teaserList.includes(ep.teaser)) {
             teaserList.push(ep.teaser);
         }
     });
@@ -137,9 +155,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     currentArtistFilterIndex = index; // Select
                     const selectedArtist = artistsInfo[index].name;
                     if (titleElement) titleElement.innerText = selectedArtist;
-                    const firstMatchingEP = db.find(e => e.artist === selectedArtist && e.teaser);
+                    const firstMatchingEP = db.find(e => e.artist === selectedArtist && getEPTeaser(e));
                     if (firstMatchingEP) {
-                        changeTeaserVideo(firstMatchingEP.teaser);
+                        changeTeaserVideo(getEPTeaser(firstMatchingEP));
                     }
                 }
                 updateArtistFilters();
@@ -202,11 +220,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                     node.card.style.display = "none";
                 }
             } else {
-                node.card.style.display = "block";
-                node.card.style.animation = 'none';
-                void node.card.offsetWidth; // Force reflow
-                node.card.style.animation = `swoopIn 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards ${displayCount * 0.1}s`;
-                displayCount++;
+                if (ep.id && ep.id.startsWith("comp_")) {
+                    node.card.style.display = "none";
+                } else {
+                    node.card.style.display = "block";
+                    node.card.style.animation = 'none';
+                    void node.card.offsetWidth; // Force reflow
+                    node.card.style.animation = `swoopIn 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards ${displayCount * 0.1}s`;
+                    displayCount++;
+                }
             }
         });
     }
@@ -249,7 +271,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
 
             // Update mini-player DOM
-            const epIndex = db.findIndex(e => e.teaser === newSrc);
+            const epIndex = db.findIndex(e => e.teaser === newSrc || (e.teasers && e.teasers.some(t => t.src === newSrc)));
             if (epIndex !== -1) {
                 currentTeaserIndex = epIndex; // Keep track globally
                 const ep = db[epIndex];
@@ -290,14 +312,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         // Only pick nodes that have a teaser
-        const validNodes = activeNodes.filter(n => db[epDOMNodes.indexOf(n)].teaser);
+        const validNodes = activeNodes.filter(n => getEPTeaser(db[epDOMNodes.indexOf(n)]));
         if (validNodes.length === 0) return;
 
         const randomNode = validNodes[Math.floor(Math.random() * validNodes.length)];
         currentTeaserIndex = epDOMNodes.indexOf(randomNode);
         const ep = db[currentTeaserIndex];
-        if (ep && ep.teaser) {
-            changeTeaserVideo(ep.teaser);
+        const chosenTeaser = getEPTeaser(ep);
+        if (chosenTeaser) {
+            changeTeaserVideo(chosenTeaser);
         }
     }
 
@@ -426,9 +449,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         jacketBg.src = currentEP.jacket || '';
         jacketBgContainer.classList.add("active"); 
         
-        if (currentEP.teaser) {
-            if (!teaserVideo || teaserVideo.getAttribute('data-current-src') !== currentEP.teaser) {
-                changeTeaserVideo(currentEP.teaser);
+        const chosenTeaser = getEPTeaser(currentEP);
+        if (chosenTeaser) {
+            if (!teaserVideo || teaserVideo.getAttribute('data-current-src') !== chosenTeaser) {
+                changeTeaserVideo(chosenTeaser);
             }
         }
         
