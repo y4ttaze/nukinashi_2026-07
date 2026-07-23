@@ -104,16 +104,16 @@
         "title": "迷っちゃった feat. 重音テト"
       },
       {
-        "title": "あなたが忘れても feat. 鏡音リン & 鏡音レン"
+        "title": "あなたが忘れても feat. 鏡音リン & 鏡音レン"
       },
       {
-        "title": "ずるやすみ feat. 宮舞モカ"
+        "title": "ずるやすみ feat. 宮舞モカ"
       },
       {
         "title": "嘘と毒 feat. 初音ミク"
       },
       {
-        "title": "シーサイドガール feat. 鏡音リン"
+        "title": "シーサイドガール feat. 鏡音リン"
       },
       {
         "title": "海の月 feat. 宮舞モカ"
@@ -143,7 +143,7 @@
   {
     "id": "04_ame_flower",
     "artist": "雨花",
-    "title": "雨の降る街で。",
+    "title": "雨の降る街で。",
     "jacket": "data/04_ame_flower/jacket.webp",
     "artist_img": "data/04_ame_flower/artist_雨花.webp",
     "teaser": "data/04_ame_flower/Teaser.mp4",
